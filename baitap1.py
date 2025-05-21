@@ -13,6 +13,17 @@ def daoNguoc(A, head, last):
     else:
         return A
 
+def insertSort(A, n):
+    for i in range(1, n):
+        key = A[i]
+        for j in range(i - 1, -1, -1):
+            if A[j] > key:
+                A[j + 1] = A[j]
+            else:
+                A[j + 1] = key
+                break
+    return A
+
 # Kiểm tra đối xứng
 def kiemTraDoiXung(A, head, last):
     if head < last:
